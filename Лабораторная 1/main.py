@@ -139,3 +139,4 @@ class Wardrobe:
 
 if __name__ == "__main__":
     doctest.testmod()  #тестирование примеров, которые находятся в документации
+    
