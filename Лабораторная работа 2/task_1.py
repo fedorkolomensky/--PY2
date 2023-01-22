@@ -13,14 +13,26 @@ BOOKS_DATABASE = [
 
 class Book:
     def __init__(self, id_: int, name: str, pages: int):
+        """
+        Создание и подготовка к работе объекта "Книга"
+        :param id_: Идентификатор (порядковый номер) книги
+        :param name: Название книги
+        :param pages: Количество страниц в книге
+        """
         self.id_ = id_
         self.name = name
         self.pages = pages
 
     def __str__(self) -> str:
+        """
+        Метод возвращает строку формата, где "название книги" берется с помощью атрибута name.
+        """
         return f'Книга "{self.name}"'
 
     def __repr__(self) -> str:
+        """
+        Метод возвращает валидную python строку, по которой можно инициализировать точной такой же экземпляр.
+        """
         return f'Book(id_={self.id_!r}, name={self.name!r}, pages={self.pages!r})'
 
 if __name__ == '__main__':
