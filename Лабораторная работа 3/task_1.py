@@ -36,8 +36,8 @@ class PaperBook(Book):
             print("Количество страниц должно быть положительным числом")
         self._pages = new_pages
 
-    def __str__(self) -> str:
-        return f"{super().__str__()} Количество страниц {self._pages}"
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}(name = {self.name!r}, author = {self.author!r}, pages = {self.pages!r})"
 
 class AudioBook(Book):
     """ Дочерний класс для аудио-книги"""
@@ -57,8 +57,5 @@ class AudioBook(Book):
             print("Продолжительность аудио-книги должна быть больше 0")
         self._duration = new_duration
 
-    def __str__(self) -> str:
-        return f"{super().__str__()} Продолжительность {self._duration}"
-
-print(PaperBook("Колеса", "Артур Хейли", 100))
-print(AudioBook("Богатый папа, бедный папа", "Роберт Кийосаки", 7.7))
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}(name = {self.name!r}, author = {self.author!r}, duration = {self.duration!r})"
