@@ -16,7 +16,7 @@ class Book:
         return f"Книга {self.name}. Автор {self.author}."
 
     def __repr__(self) -> str:
-        return f"{self.__class__.__name__}(name={self._name!r}, author={self._author!r})"
+        return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r})"
 
 class PaperBook(Book):
     """ Дочерний класс для бумажной книги """
